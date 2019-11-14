@@ -121,13 +121,13 @@ CREATE TABLE "SFR" (
 );
 
 CREATE TABLE "CityLatLong" (
-   "'index'" int   NOT NULL,
-   "'RegionName'" varchar   NOT NULL,
-   "'State'" varchar   NOT NULL,
-   "'Latitude'" float,
-   "'Longitude'" float,
-   "'CountyName'" varchar,
+   "index" int   NOT NULL,
+   "RegionName" varchar   NOT NULL,
+   "State" varchar   NOT NULL,
+   "Latitude" float,
+   "Longitude" float,
+   "CountyName" varchar,
    CONSTRAINT "pk_CityLatLong" PRIMARY KEY (
-       "'index'"
+       "index"
     )
 );
