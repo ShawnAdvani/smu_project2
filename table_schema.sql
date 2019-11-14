@@ -120,6 +120,18 @@ CREATE TABLE "SFR" (
      )
 );
 
+CREATE TABLE "CityLatLong" (
+   "'index'" int   NOT NULL,
+   "'RegionName'" varchar   NOT NULL,
+   "'State'" varchar   NOT NULL,
+   "'Latitude'" int   NOT NULL,
+   "'Longitude'" int   NOT NULL,
+   "'CountyName'" varchar   NOT NULL,
+   CONSTRAINT "pk_CityLatLong" PRIMARY KEY (
+       "'index'"
+    )
+);
+
 ALTER TABLE "2BR" ADD CONSTRAINT "fk_2BR_index" FOREIGN KEY("index")
 REFERENCES "3BR" ("index");
 
@@ -145,5 +157,5 @@ ALTER TABLE "Manufactured" ADD CONSTRAINT "fk_Manufactured_index" FOREIGN KEY("i
 REFERENCES "SFR" ("index");
 
 ALTER TABLE "SFR" ADD CONSTRAINT "fk_SFR_index" FOREIGN KEY("index")
-REFERENCES "2BR" ("index");
+REFERENCES "CityLatLong" ("index");
 
